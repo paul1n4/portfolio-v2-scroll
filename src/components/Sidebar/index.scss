@@ -1,0 +1,129 @@
+.sidebar{
+  // border: 2px solid black;
+  grid-area: sidebar;
+  background: #5C6641;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //position: sticky;
+
+  // @media (max-width: 768px) {
+  //   position: fixed;
+  //   z-index: 1000;
+  //   block-size: 100vh;
+  //   inline-size: 240px; // Adjust for a slide-out menu
+  //   transform: translateX(-100%);
+  //   transition: transform 0.3s ease-in-out;
+  // }
+
+  .logo {
+    img {
+      display: block;
+      margin: 16px auto;
+      width: 48px;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 20px;
+
+    a {
+      font-size: 22px;
+      color: #939580;
+      text-decoration: none;
+      text-align: center;
+      position: relative;
+
+      i {
+        transition: all 0.3s ease-out;
+      }
+
+      &:hover {
+        color: #fff;
+
+        svg {
+          opacity: 0;
+        }
+
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      &:after {
+        content: '';
+        font-size: 9px;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+      }
+
+      &:first-child {
+        &::after {
+          content: 'HOME';
+        }
+      }
+    }
+
+    a.about-link {
+      &:after {
+        content: 'ABOUT';
+      }
+    }
+    
+    a.skills-link {
+      &:after {
+        content: 'SKILLS';
+      }
+    }
+    
+    a.projects-link {
+      &:after {
+        content: 'PROJECTS';
+      }
+    }
+    
+    a.contact-link {
+      &:after {
+        content: 'CONTACT';
+      }
+    }
+
+    a.active {
+      svg {
+        color: #fff;
+      }
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 16px 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+      a {
+        color: #939580;
+        padding: 5px 0;
+        display: block;
+        font-size: 15px;
+        text-decoration: none;
+        font-weight: 400;
+        
+        &:hover {
+          color: #fff;
+        }
+      }
+
+    }
+  }
+}

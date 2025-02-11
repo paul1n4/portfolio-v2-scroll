@@ -1,0 +1,7 @@
+/assets/fonts/*.otf
+  Access-Control-Allow-Origin: *
+  Content-Type: application/font-otf
+
+/assets/fonts/*.ttf
+  Access-Control-Allow-Origin: *
+  Content-Type: application/font-ttf

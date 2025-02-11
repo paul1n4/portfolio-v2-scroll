@@ -1,0 +1,24 @@
+.App {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: 100vh;
+  block-size: 100vh;
+  grid-template-areas: "sidebar container";
+
+  .page {
+    grid-area: container;
+    display: flex;
+    overflow: auto;
+  }
+  
+  .container {
+    margin: 60px;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      margin: 30px;
+    }
+  } 
+}

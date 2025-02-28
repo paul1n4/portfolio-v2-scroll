@@ -8,3 +8,29 @@
   src: url('/assets/fonts/Pistilli-Roman.otf') format('otf');
 }
 
+.App {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: 100vh;
+  block-size: 100vh;
+  grid-template-areas: "sidebar container";
+
+  .page {
+    //border: 2px solid red;
+    grid-area: container;
+    display: flex;
+    //overflow: auto;
+    flex-direction: column;
+  }
+  
+  .container {
+    margin: 60px;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      margin: 30px;
+    }
+  } 
+}

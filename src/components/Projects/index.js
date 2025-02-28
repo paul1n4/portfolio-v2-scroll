@@ -8,7 +8,7 @@ const Projects = () => {
   const [toggled, setToggled] = useState(true)
 
   return (
-    <div className='container projects-page'>
+    <section className='container projects-page' id='projects'>
       <h2>Projects</h2>
       <div className='toggle-container'>
         <p style={{color: toggled ? '#8c9a90' : '#566866', fontWeight: toggled ? 400 : 500}}>Collapse</p>
@@ -36,7 +36,7 @@ const Projects = () => {
         ))}
       </div>
       <div className='spacer'></div>
-    </div>
+    </section>
   )
 }
 

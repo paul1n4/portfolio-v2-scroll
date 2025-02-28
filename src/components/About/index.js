@@ -4,7 +4,7 @@ import DesignIllustration from '../../assets/images/design_illustration.png'
 
 const About = () => {
   return (
-    <div className='container about-page'>
+    <section className='container about-page' id='about'>
       <h2>About Me</h2>
       <div className='about-content'>
         <div className='about-text'>
@@ -27,7 +27,7 @@ const About = () => {
       </div>
 
       <div className='spacer'></div>
-    </div>
+    </section>
   )
 }
 

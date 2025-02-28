@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './index.scss'
 import LogoPV from '../../assets/images/logo-pv.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,26 +7,29 @@ import { faBriefcase, faEnvelope, faGear, faHome, faUser } from '@fortawesome/fr
 const Sidebar = () => {
   return (
     <div className='sidebar'>
-      <Link className='logo' to='/'>
+      <a className='logo' href='#home'>
         <img src={LogoPV} alt='logo' />
-      </Link> 
+      </a> 
 
       <nav>
-        <NavLink exact="true" activeclassname="active" to="/">
+        <a href="#home">
           <FontAwesomeIcon icon={faHome} />
-        </NavLink>
-        <NavLink exact="true" activeclassname="active" className="about-link" to="/about">
+        </a>
+        <a 
+          className="about-link" 
+          href="#about"
+        >
           <FontAwesomeIcon icon={faUser} />
-        </NavLink>
-        <NavLink exact="true" activeclassname="active" className="skills-link" to="/skills">
+        </a>
+        <a className="skills-link" href="#skills">
           <FontAwesomeIcon icon={faGear} />
-        </NavLink>
-        <NavLink exact="true" activeclassname="active" className="projects-link" to="/projects">
+        </a>
+        <a className="projects-link" href="#projects">
           <FontAwesomeIcon icon={faBriefcase} />
-        </NavLink>
-        <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact">
+        </a>
+        <a className="contact-link" href="#contact">
           <FontAwesomeIcon icon={faEnvelope} />
-        </NavLink>
+        </a>
       </nav>   
 
       <ul>

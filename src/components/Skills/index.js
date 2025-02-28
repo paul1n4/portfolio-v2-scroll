@@ -4,7 +4,7 @@ import { faBootstrap, faCss3, faHtml5, faJs, faReact, faSass } from '@fortawesom
 
 const Skills = () => {
   return (
-    <div className='container skills-page'>
+    <section className='container skills-page' id='skills'>
       <h2>Skills</h2>
       <div className='skills-list'>
         <div className='skill'>
@@ -83,7 +83,7 @@ const Skills = () => {
         </div>
 
       </div>
-    </div>
+    </section>
   )
 }
 

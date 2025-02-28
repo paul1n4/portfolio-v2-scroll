@@ -11,11 +11,13 @@ function App() {
     <div className='App'>
       <Sidebar />
       <div className='page'>
-        <Home />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <div className='container'>
+          <Home />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </div>
       </div>
     </div>
   )

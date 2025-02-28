@@ -1,5 +1,4 @@
 .projects-page{
-  padding-bottom: 32px;
 
   h2 {
     font-size: 53px;
@@ -69,10 +68,6 @@
   .projects-list-detail{
     //border: 1px solid blue;
     display: block;
-  }
-
-  .spacer {
-    height: 32px;
   }
 
   @media (max-width: 480px) {

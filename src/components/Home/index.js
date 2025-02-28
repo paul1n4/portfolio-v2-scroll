@@ -3,7 +3,7 @@ import Leaves from './Leaves'
 
 const Home = () => {
   return (
-    <section className="container home-page" id='home'>
+    <section className="home-page" id='home'>
       <Leaves />
       <div className="text-zone">
         <h1>Paulina Valero</h1>

@@ -4,7 +4,7 @@ import DesignIllustration from '../../assets/images/design_illustration.png'
 
 const About = () => {
   return (
-    <section className='container about-page' id='about'>
+    <section className='about-page' id='about'>
       <h2>About Me</h2>
       <div className='about-content'>
         <div className='about-text'>

@@ -1,4 +1,6 @@
 .contact-page {
+  margin-bottom: 80px;
+
   h2 {
     font-size: 53px;
     font-weight: 400;
@@ -128,6 +130,17 @@
           flex-direction: row;
           justify-content: center;
           gap: 36px;
+        }
+      }
+      .form-container{
+        form {
+          .half-input {
+            input {
+              width: 150px;
+              padding: 16px 0 16px 12px;
+  
+            }
+          }
         }
       }
     }

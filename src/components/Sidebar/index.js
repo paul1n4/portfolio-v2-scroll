@@ -5,7 +5,7 @@ import { faBriefcase, faEnvelope, faGear, faHome, faUser } from '@fortawesome/fr
 import { useState, useEffect } from 'react'
 
 const Sidebar = () => {
-  const [isActive, setIsActive] = useState('about')
+  const [isActive, setIsActive] = useState('home')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,9 +14,15 @@ const Sidebar = () => {
 
       sections.forEach( section => {
         const sectionTop = section.getBoundingClientRect().top;
-            
-        if (sectionTop <= window.innerHeight / 3) {
-          currentSection = section.id;
+        
+        if (section.id === 'contact'){
+          if (sectionTop <= window.innerHeight / 1.2) {
+            currentSection = section.id;
+          }
+        } else {
+          if (sectionTop <= window.innerHeight / 3) {
+            currentSection = section.id;
+          }
         }
       });
 
@@ -34,7 +40,15 @@ const Sidebar = () => {
 
   return (
     <div className='sidebar'>
-      <a className='logo' href='#home'>
+      <a 
+        href='/' 
+        className='logo' 
+        onClick={(e) => {
+          e.preventDefault(); 
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.history.replaceState(null, '', '/');
+        }}
+      >
         <img src={LogoPV} alt='logo' />
       </a> 
 
